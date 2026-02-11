@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>RITA — Knowledge Answers</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+
+    <!-- Header -->
+    <header class="app-header">
+      <div class="app-header__brand">
+        <img src="assets/images/Resolve-Logo-Full-Color-RGB-159px.jpg" alt="Resolve" class="app-header__logo">
+      </div>
+      <div class="app-header__nav">
+        <a href="index.html" class="app-header__home-btn">&#8592; Home</a>
+      </div>
+    </header>
+
+    <!-- Tour Progress -->
+    <div id="tour-progress" class="tour-progress"></div>
+
+    <!-- Page Title -->
+    <div class="page-title-bar">
+      <div class="page-title-bar__title">Step 1: Knowledge Answers</div>
+      <div class="page-title-bar__desc">RITA surfaces knowledge articles from your connected sources — directly in a chat experience.</div>
+    </div>
+
+    <!-- Main Content: Split Pane -->
+    <div class="page-content">
+      <div class="split-pane split-pane--teams-wide">
+
+        <!-- LEFT: Teams Chat Mock -->
+        <div class="split-pane__left">
+          <div class="teams-mock">
+
+            <!-- Teams Left Rail -->
+            <div class="teams-rail">
+              <div class="teams-rail__icon active" title="Chat">&#128172;</div>
+              <div class="teams-rail__icon" title="Teams">&#128101;</div>
+              <div class="teams-rail__icon" title="Calendar">&#128197;</div>
+              <div class="teams-rail__icon" title="Files">&#128196;</div>
+              <div class="teams-rail__icon" title="Apps">&#183;&#183;&#183;</div>
+            </div>
+
+            <!-- Chat List -->
+            <div class="teams-chatlist">
+              <div class="teams-chatlist__header">Chat</div>
+              <div class="teams-chatlist__search" role="textbox">Search</div>
+              <div class="teams-chatlist__item active">
+                <div class="teams-chatlist__avatar teams-chatlist__avatar--rita">
+                  <img src="assets/images/Resolve-Mark.png" alt="RITA" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%;">
+                </div>
+                <div class="teams-chatlist__info">
+                  <div class="teams-chatlist__name">RITA</div>
+                  <div class="teams-chatlist__preview">How do I add email to my iPhone?</div>
+                </div>
+              </div>
+              <div class="teams-chatlist__item">
+                <div class="teams-chatlist__avatar" style="background: #6264a7;">IT</div>
+                <div class="teams-chatlist__info">
+                  <div class="teams-chatlist__name">IT Help Desk</div>
+                  <div class="teams-chatlist__preview">Your ticket has been updated</div>
+                </div>
+              </div>
+              <div class="teams-chatlist__item">
+                <div class="teams-chatlist__avatar" style="background: #7c8db5;">JD</div>
+                <div class="teams-chatlist__info">
+                  <div class="teams-chatlist__name">Jane Doe</div>
+                  <div class="teams-chatlist__preview">Thanks for the update!</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chat Pane -->
+            <div class="teams-chat">
+              <div class="teams-chat__header">
+                <div class="teams-chatlist__avatar teams-chatlist__avatar--rita">
+                  <img src="assets/images/Resolve-Mark.png" alt="RITA" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%;">
+                </div>
+                <div>
+                  <div class="teams-chat__header-name">RITA</div>
+                  <div class="teams-chat__header-status">&#9679; Online</div>
+                </div>
+              </div>
+
+              <div class="teams-chat__messages">
+
+                <!-- User message -->
+                <div class="chat-message chat-message--user animate-fade-in">
+                  <div class="chat-message__avatar">AS</div>
+                  <div class="chat-message__body">
+                    <div class="chat-message__sender">Ari Stowe <span class="chat-message__time">10:32 AM</span></div>
+                    <div class="chat-message__bubble">How do I add email to my iPhone?</div>
+                  </div>
+                </div>
+
+                <!-- RITA response -->
+                <div class="chat-message chat-message--bot animate-fade-in delay-2">
+                  <div class="chat-message__avatar" style="padding: 0; overflow: hidden;">
+                    <img src="assets/images/Resolve-Mark.png" alt="RITA" style="width: 100%; height: 100%; object-fit: contain;">
+                  </div>
+                  <div class="chat-message__body">
+                    <div class="chat-message__sender">RITA <span class="chat-message__time">10:32 AM</span></div>
+                    <div class="chat-message__bubble">
+                      <div class="kb-article">
+                        <div class="kb-article__header">
+                          <div class="kb-article__title">Adding Corporate Email to iPhone</div>
+                        </div>
+                        <div class="kb-article__body">
+                          <ol class="kb-article__steps">
+                            <li class="kb-article__step">Open <strong>Settings</strong> on your iPhone.</li>
+                            <li class="kb-article__step">Tap <strong>Mail</strong> &rarr; <strong>Accounts</strong> &rarr; <strong>Add Account</strong>.</li>
+                            <li class="kb-article__step">Select <strong>Microsoft Exchange</strong>.</li>
+                            <li class="kb-article__step">Enter your corporate email address and tap <strong>Next</strong>.</li>
+                            <li class="kb-article__step">Authenticate with your SSO credentials when prompted.</li>
+                            <li class="kb-article__step">Toggle on <strong>Mail</strong>, <strong>Calendar</strong>, and <strong>Contacts</strong>, then tap <strong>Save</strong>.</li>
+                          </ol>
+                        </div>
+                        <div class="kb-article__links">
+                          <div class="text-xs text-muted mb-md">Related Links</div>
+                          <div class="pills-row">
+                            <span class="pill pill--accent">KB-2041: Mobile Email Setup</span>
+                            <span class="pill">KB-1893: SSO Troubleshooting</span>
+                          </div>
+                        </div>
+                        <div class="kb-article__helpful">
+                          <span>Was this helpful?</span>
+                          <div class="kb-article__helpful-btns">
+                            <button class="btn btn-sm btn-secondary">Yes</button>
+                            <button class="btn btn-sm btn-secondary">No</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="teams-chat__input">
+                <div class="teams-chat__input-box">Type a message...</div>
+              </div>
+            </div>
+
+          </div><!-- /teams-mock -->
+        </div><!-- /split-pane__left -->
+
+        <!-- RIGHT: Knowledge Explainer -->
+        <div class="split-pane__right">
+
+          <!-- Why it matters — moved to top -->
+          <div class="callout callout--info mb-lg animate-fade-in delay-1">
+            <div class="callout__title">Why it matters</div>
+            <div class="callout__text">
+              Instead of searching across multiple portals, employees ask RITA in natural language and get structured, verified answers instantly. This reduces ticket volume and resolution time while ensuring consistent information delivery.
+            </div>
+          </div>
+
+          <div class="card card--elevated animate-fade-in delay-3">
+            <div class="card__title">Knowledge Explainer</div>
+            <div class="card__subtitle">How RITA sources answers</div>
+            <div class="explainer mt-md">
+              <div class="explainer__title">Multi-Source Knowledge</div>
+              <div class="explainer__text">
+                Knowledge can be pulled from multiple sources — SharePoint, Confluence, Ivanti, JIRA, ServiceNow, Freshservice, Workday, and more — so you can build a living library that powers RITA's answers. Administrators configure which sources to index, and RITA retrieves the most relevant articles in real time using semantic search.
+              </div>
+            </div>
+
+            <div class="mt-lg">
+              <div class="text-xs text-muted mb-md" style="text-transform: uppercase; letter-spacing: 0.05em;">Connected Sources</div>
+              <div class="pills-row">
+                <span class="pill pill--accent">SharePoint</span>
+                <span class="pill pill--accent">Confluence</span>
+                <span class="pill pill--accent">Ivanti</span>
+                <span class="pill pill--accent">JIRA</span>
+                <span class="pill pill--accent">ServiceNow</span>
+                <span class="pill pill--accent">Workday</span>
+                <span class="pill pill--accent">Custom KB</span>
+              </div>
+              <button class="btn btn-sm" style="margin-top: 12px; background: #e5e7eb; color: #374151; border: 1px solid #d1d5db; border-radius: 6px; padding: 6px 16px; font-size: 0.8rem; font-weight: 500; cursor: pointer;">+ Add Source</button>
+            </div>
+          </div>
+        </div><!-- /split-pane__right -->
+
+      </div><!-- /split-pane -->
+    </div><!-- /page-content -->
+
+    <!-- Bottom Nav -->
+    <nav id="nav-bar" class="nav-bar"></nav>
+
+  </div><!-- /app-shell -->
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

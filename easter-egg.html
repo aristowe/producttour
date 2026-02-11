@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>RITA — You Found It!</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .easter-egg {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: calc(100vh - 56px);
+      text-align: center;
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    .easter-egg__icon {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 32px;
+      animation: bounce 1s ease infinite;
+    }
+
+    .easter-egg__icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-16px); }
+    }
+
+    .easter-egg__title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #0f1f3d;
+      margin-bottom: 16px;
+    }
+
+    .easter-egg__subtitle {
+      font-size: 1.1rem;
+      color: #6b7280;
+      max-width: 480px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    .easter-egg__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      background: #0066FF;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 150ms ease;
+    }
+
+    .easter-egg__cta:hover {
+      background: #0052cc;
+    }
+
+    /* Confetti canvas */
+    #confetti-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+
+    <!-- Header -->
+    <header class="app-header">
+      <div class="app-header__brand">
+        <img src="assets/images/Resolve-Logo-Full-Color-RGB-159px.jpg" alt="Resolve" class="app-header__logo">
+      </div>
+      <div class="app-header__nav">
+        <a href="index.html" class="app-header__home-btn">&#8592; Home</a>
+      </div>
+    </header>
+
+    <canvas id="confetti-canvas"></canvas>
+
+    <div class="easter-egg">
+      <div class="easter-egg__icon">
+        <img src="assets/images/Resolve-Mark.png" alt="Resolve Mark">
+      </div>
+      <div class="easter-egg__title">You Found an Easter Egg!</div>
+      <div class="easter-egg__subtitle">
+        Nice work, explorer! Head over to the booth team to collect your exclusive swag.
+      </div>
+      <a href="index.html" class="easter-egg__cta">&#8592; Back to Home</a>
+    </div>
+
+  </div>
+
+  <script>
+    // Confetti animation
+    (function() {
+      const canvas = document.getElementById('confetti-canvas');
+      const ctx = canvas.getContext('2d');
+      let W, H;
+      const particles = [];
+      const colors = ['#0066FF', '#00a8b5', '#22c55e', '#f59e0b', '#ef4444', '#6264a7', '#0f1f3d'];
+      const particleCount = 150;
+
+      function resize() {
+        W = canvas.width = window.innerWidth;
+        H = canvas.height = window.innerHeight;
+      }
+      resize();
+      window.addEventListener('resize', resize);
+
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * W,
+          y: Math.random() * H - H,
+          w: Math.random() * 10 + 5,
+          h: Math.random() * 6 + 3,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          vx: (Math.random() - 0.5) * 3,
+          vy: Math.random() * 3 + 2,
+          rot: Math.random() * 360,
+          rotSpeed: (Math.random() - 0.5) * 8,
+          opacity: 1
+        });
+      }
+
+      let frame = 0;
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+        frame++;
+
+        particles.forEach(p => {
+          p.x += p.vx;
+          p.y += p.vy;
+          p.rot += p.rotSpeed;
+          p.vy += 0.02; // gravity
+
+          // Fade out after 3 seconds (~180 frames at 60fps)
+          if (frame > 180) {
+            p.opacity -= 0.005;
+            if (p.opacity < 0) p.opacity = 0;
+          }
+
+          ctx.save();
+          ctx.translate(p.x, p.y);
+          ctx.rotate((p.rot * Math.PI) / 180);
+          ctx.globalAlpha = p.opacity;
+          ctx.fillStyle = p.color;
+          ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+          ctx.restore();
+        });
+
+        // Stop when all faded
+        const anyVisible = particles.some(p => p.opacity > 0);
+        if (anyVisible) {
+          requestAnimationFrame(draw);
+        }
+      }
+      draw();
+    })();
+  </script>
+</body>
+</html>

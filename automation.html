@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>RITA — Ticket Automation</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+
+    <!-- Header -->
+    <header class="app-header">
+      <div class="app-header__brand">
+        <img src="assets/images/Resolve-Logo-Full-Color-RGB-159px.jpg" alt="Resolve" class="app-header__logo">
+      </div>
+      <div class="app-header__nav">
+        <a href="index.html" class="app-header__home-btn">&#8592; Home</a>
+      </div>
+    </header>
+
+    <!-- Tour Progress -->
+    <div id="tour-progress" class="tour-progress"></div>
+
+    <!-- Page Title -->
+    <div class="page-title-bar">
+      <div class="page-title-bar__title">Step 2: Ticket Automation</div>
+      <div class="page-title-bar__desc">RITA executes deterministic, governed workflows to fulfill service requests with full audit trails.</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="page-content">
+
+      <!-- Top row: Chat left, Explainer right -->
+      <div class="split-pane mb-lg">
+
+        <!-- LEFT: Teams Chat compact -->
+        <div class="split-pane__left">
+          <div class="card card--elevated animate-fade-in" style="max-width: 560px;">
+            <div class="card__title" style="font-size: 0.85rem; margin-bottom: var(--space-sm);">Chat with RITA</div>
+            <div style="display: flex; flex-direction: column; gap: var(--space-sm);">
+              <!-- User message -->
+              <div class="chat-message chat-message--user" style="max-width: 100%;">
+                <div class="chat-message__avatar">AS</div>
+                <div class="chat-message__body">
+                  <div class="chat-message__sender">Ari Stowe <span class="chat-message__time">2:14 PM</span></div>
+                  <div class="chat-message__bubble">
+                    <span class="type-in" data-text="Can you add me to the Finance Updates distribution list?"></span>
+                  </div>
+                </div>
+              </div>
+              <!-- RITA response -->
+              <div class="chat-message chat-message--bot animate-fade-in delay-3" style="max-width: 100%;">
+                <div class="chat-message__avatar" style="padding: 0; overflow: hidden;">
+                  <img src="assets/images/Resolve-Mark.png" alt="RITA" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <div class="chat-message__body">
+                  <div class="chat-message__sender">RITA <span class="chat-message__time">2:14 PM</span></div>
+                  <div class="chat-message__bubble">
+                    Done — I've submitted the request and confirmed your membership in the <strong>Finance Updates</strong> distribution list.
+                    <div class="confirmation-card mt-md">
+                      <div class="confirmation-card__row">
+                        <span class="confirmation-card__label">Request ID</span>
+                        <span class="confirmation-card__value">REQ-20260209-4872</span>
+                      </div>
+                      <div class="confirmation-card__row">
+                        <span class="confirmation-card__label">Status</span>
+                        <span class="confirmation-card__value" style="color: var(--color-success);">&#10003; Completed</span>
+                      </div>
+                      <div class="confirmation-card__row">
+                        <span class="confirmation-card__label">Distribution List</span>
+                        <span class="confirmation-card__value">Finance Updates</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Deterministic Orchestration explainer -->
+        <div class="split-pane__right">
+          <div class="explainer animate-fade-in delay-2">
+            <div class="explainer__title">Deterministic Orchestration</div>
+            <div class="explainer__text">
+              Every step in this workflow is predefined, auditable, and governed by policy. RITA follows the exact sequence no improvisation, no skipped steps. Approval rules, RBAC checks, and audit logging are enforced automatically. This is how high-volume, repeatable tasks get automated safely at enterprise scale.
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /split-pane top row -->
+
+      <!-- Main: Distribution List Workflow Screenshot -->
+      <div class="screenshot-area screenshot-area--hero mb-lg animate-fade-in delay-1" data-asset="distributionListWF" data-label="Screenshot: Distribution List Add Workflow"></div>
+
+    </div><!-- /page-content -->
+
+    <!-- Bottom Nav -->
+    <nav id="nav-bar" class="nav-bar"></nav>
+
+  </div><!-- /app-shell -->
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

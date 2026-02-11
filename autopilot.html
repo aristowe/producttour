@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>RITA — AutoPilot Ticket Analysis</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+
+    <!-- Header -->
+    <header class="app-header">
+      <div class="app-header__brand">
+        <img src="assets/images/Resolve-Logo-Full-Color-RGB-159px.jpg" alt="Resolve" class="app-header__logo">
+      </div>
+      <div class="app-header__nav">
+        <a href="index.html" class="app-header__home-btn">&#8592; Home</a>
+      </div>
+    </header>
+
+    <!-- Tour Progress -->
+    <div id="tour-progress" class="tour-progress"></div>
+
+    <!-- Page Title -->
+    <div class="page-title-bar">
+      <div class="page-title-bar__title">Step 4: AutoPilot Ticket Analysis</div>
+      <div class="page-title-bar__desc">ML-driven ticket clustering identifies the highest-value automation opportunities in your ITSM data.</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="page-content">
+
+      <!-- Top row: How AutoPilot Works (left) + Top Opportunities (right) -->
+      <div class="split-pane mb-lg">
+
+        <!-- LEFT: How AutoPilot Works -->
+        <div class="split-pane__left">
+          <div class="explainer animate-fade-in">
+            <div class="explainer__title">How AutoPilot Works</div>
+            <div class="explainer__text">
+              AutoPilot ingests historical tickets from your ITSM system. Machine learning models cluster tickets by semantic similarity — not just keyword matching — to identify natural groupings. Each cluster is scored for automation potential based on volume, complexity, and existing knowledge coverage. The result is a prioritized roadmap for building automations that deliver the greatest impact.
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Top Automation Opportunities — 5 foundational -->
+        <div class="split-pane__right">
+          <div class="callout callout--success animate-fade-in delay-1">
+            <div class="callout__title">Top Automation Opportunities</div>
+            <div class="callout__text">
+              Based on volume and complexity analysis, these five foundational categories offer the highest ROI for automation:
+            </div>
+            <div class="mt-md">
+              <div class="pills-row" style="flex-wrap: wrap;">
+                <span class="pill pill--success">Password Resets &amp; Account Unlocks</span>
+                <span class="pill pill--success">Access Requests</span>
+                <span class="pill pill--success">Software Installations &amp; Licensing</span>
+                <span class="pill pill--accent">Email &amp; Collaboration Tool Issues</span>
+                <span class="pill pill--accent">VPN Troubleshooting &amp; Remediation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /split-pane top -->
+
+      <!-- Main Screenshot: Ticket Analysis -->
+      <div class="screenshot-area screenshot-area--hero mb-lg animate-fade-in delay-1" data-asset="ticketAnalysis" data-label="Screenshot: RITA AutoPilot Ticket Analysis"></div>
+
+      <!-- Stats Row -->
+      <div class="dashboard-grid mb-lg animate-fade-in delay-2">
+        <div class="stat-card">
+          <div class="stat-card__value">103K</div>
+          <div class="stat-card__label">Total Tickets</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__value">12</div>
+          <div class="stat-card__label">Ticket Groups</div>
+        </div>
+        <div class="stat-card stat-card--accent">
+          <div class="stat-card__value">2,517</div>
+          <div class="stat-card__label">Automatable</div>
+        </div>
+        <div class="stat-card stat-card--success">
+          <div class="stat-card__value">76%</div>
+          <div class="stat-card__label">Knowledge Found</div>
+        </div>
+      </div>
+
+      <div class="split-pane">
+
+        <!-- LEFT: Clusters & Chart -->
+        <div class="split-pane__left">
+
+          <div class="section-heading">
+            Ticket Groups
+            <span class="section-heading__badge">12 clusters</span>
+          </div>
+
+          <!-- Cluster Cards -->
+          <div class="cluster-grid mb-lg">
+            <div class="cluster-card animate-fade-in delay-1">
+              <div class="cluster-card__count">976</div>
+              <div class="cluster-card__name">Password Resets &amp; Account Unlocks</div>
+              <div class="cluster-card__meta">
+                <span style="color: var(--color-success);">&#9679;</span> Automated 0%
+                <span class="cluster-card__badge cluster-card__badge--found">Knowledge found</span>
+              </div>
+            </div>
+            <div class="cluster-card animate-fade-in delay-2">
+              <div class="cluster-card__count">743</div>
+              <div class="cluster-card__name">Access Requests</div>
+              <div class="cluster-card__meta">
+                <span style="color: var(--color-success);">&#9679;</span> Automated 0%
+                <span class="cluster-card__badge cluster-card__badge--found">Knowledge found</span>
+              </div>
+            </div>
+            <div class="cluster-card animate-fade-in delay-3">
+              <div class="cluster-card__count">564</div>
+              <div class="cluster-card__name">Software Installations &amp; Licensing</div>
+              <div class="cluster-card__meta">
+                <span style="color: var(--color-success);">&#9679;</span> Automated 5%
+                <span class="cluster-card__badge cluster-card__badge--found">Knowledge found</span>
+              </div>
+            </div>
+            <div class="cluster-card animate-fade-in delay-4">
+              <div class="cluster-card__count">389</div>
+              <div class="cluster-card__name">Email &amp; Collaboration Tool Issues</div>
+              <div class="cluster-card__meta">
+                <span style="color: var(--color-success);">&#9679;</span> Automated 0%
+                <span class="cluster-card__badge cluster-card__badge--found">Knowledge found</span>
+              </div>
+            </div>
+            <div class="cluster-card animate-fade-in delay-5">
+              <div class="cluster-card__count">245</div>
+              <div class="cluster-card__name">VPN Troubleshooting &amp; Remediation</div>
+              <div class="cluster-card__meta">
+                <span style="color: var(--color-success);">&#9679;</span> Automated 0%
+                <span class="cluster-card__badge cluster-card__badge--found">Knowledge found</span>
+              </div>
+            </div>
+            <div class="cluster-card animate-fade-in delay-6">
+              <div class="cluster-card__count">32</div>
+              <div class="cluster-card__name">System Overload</div>
+              <div class="cluster-card__meta">
+                <span style="color: var(--color-success);">&#9679;</span> Automated 0%
+                <span class="cluster-card__badge cluster-card__badge--gap">Knowledge gap</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ML Categorization Chart -->
+          <div class="card animate-fade-in delay-3">
+            <div class="card__title">ML Categorization</div>
+            <div class="card__subtitle">Ticket volume by cluster</div>
+            <div class="bar-chart mt-md">
+              <div class="bar-chart__item">
+                <span class="bar-chart__label">Password Resets</span>
+                <div class="bar-chart__track">
+                  <div class="bar-chart__fill" data-width="100%" style="width: 0%;">976</div>
+                </div>
+              </div>
+              <div class="bar-chart__item">
+                <span class="bar-chart__label">Access Requests</span>
+                <div class="bar-chart__track">
+                  <div class="bar-chart__fill" data-width="76%" style="width: 0%;">743</div>
+                </div>
+              </div>
+              <div class="bar-chart__item">
+                <span class="bar-chart__label">Software &amp; Licensing</span>
+                <div class="bar-chart__track">
+                  <div class="bar-chart__fill bar-chart__fill--alt" data-width="58%" style="width: 0%;">564</div>
+                </div>
+              </div>
+              <div class="bar-chart__item">
+                <span class="bar-chart__label">Email &amp; Collab</span>
+                <div class="bar-chart__track">
+                  <div class="bar-chart__fill" data-width="40%" style="width: 0%;">389</div>
+                </div>
+              </div>
+              <div class="bar-chart__item">
+                <span class="bar-chart__label">VPN Issues</span>
+                <div class="bar-chart__track">
+                  <div class="bar-chart__fill bar-chart__fill--alt" data-width="25%" style="width: 0%;">245</div>
+                </div>
+              </div>
+              <div class="bar-chart__item">
+                <span class="bar-chart__label">System Overload</span>
+                <div class="bar-chart__track">
+                  <div class="bar-chart__fill" data-width="3%" style="width: 0%;">32</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /split-pane__left -->
+
+        <!-- RIGHT: Table -->
+        <div class="split-pane__right">
+
+          <!-- Sample Tickets Table -->
+          <div class="card animate-fade-in delay-3">
+            <div class="card__title">Sample Clustered Tickets</div>
+            <div class="card__subtitle">Representative tickets from each group</div>
+            <div class="data-table-container mt-md">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Ticket ID</th>
+                    <th>Category</th>
+                    <th>Summary</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>INC-41002</td>
+                    <td>Password Reset</td>
+                    <td>Account locked after failed login attempts</td>
+                    <td><span class="pill pill--warning">Open</span></td>
+                  </tr>
+                  <tr>
+                    <td>INC-41018</td>
+                    <td>Access Request</td>
+                    <td>Need access to Finance SharePoint site</td>
+                    <td><span class="pill pill--success">Resolved</span></td>
+                  </tr>
+                  <tr>
+                    <td>INC-41025</td>
+                    <td>Software</td>
+                    <td>Install Adobe Creative Suite on new laptop</td>
+                    <td><span class="pill pill--warning">Open</span></td>
+                  </tr>
+                  <tr>
+                    <td>INC-41033</td>
+                    <td>Email</td>
+                    <td>Outlook crashes on startup after update</td>
+                    <td><span class="pill pill--warning">Open</span></td>
+                  </tr>
+                  <tr>
+                    <td>INC-41047</td>
+                    <td>VPN</td>
+                    <td>VPN disconnects after 10 minutes idle</td>
+                    <td><span class="pill pill--success">Resolved</span></td>
+                  </tr>
+                  <tr>
+                    <td>INC-41061</td>
+                    <td>Password Reset</td>
+                    <td>Expired password — cannot login to desktop</td>
+                    <td><span class="pill pill--warning">Open</span></td>
+                  </tr>
+                  <tr>
+                    <td>INC-41079</td>
+                    <td>Access Request</td>
+                    <td>Add to Marketing distribution list</td>
+                    <td><span class="pill pill--error">Escalated</span></td>
+                  </tr>
+                  <tr>
+                    <td>INC-41085</td>
+                    <td>Software</td>
+                    <td>License expired for Visio Pro</td>
+                    <td><span class="pill pill--warning">Open</span></td>
+                  </tr>
+                  <tr>
+                    <td>INC-41092</td>
+                    <td>Email</td>
+                    <td>Teams meeting invites not syncing to calendar</td>
+                    <td><span class="pill pill--warning">Open</span></td>
+                  </tr>
+                  <tr>
+                    <td>INC-41108</td>
+                    <td>VPN</td>
+                    <td>Cannot connect to VPN from remote office</td>
+                    <td><span class="pill pill--warning">Open</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div><!-- /split-pane__right -->
+
+      </div><!-- /split-pane -->
+    </div><!-- /page-content -->
+
+    <!-- Bottom Nav -->
+    <nav id="nav-bar" class="nav-bar"></nav>
+
+  </div><!-- /app-shell -->
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

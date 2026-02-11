@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>RITA — Agentic Workflows</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+
+    <!-- Header -->
+    <header class="app-header">
+      <div class="app-header__brand">
+        <img src="assets/images/Resolve-Logo-Full-Color-RGB-159px.jpg" alt="Resolve" class="app-header__logo">
+      </div>
+      <div class="app-header__nav">
+        <a href="index.html" class="app-header__home-btn">&#8592; Home</a>
+      </div>
+    </header>
+
+    <!-- Tour Progress -->
+    <div id="tour-progress" class="tour-progress"></div>
+
+    <!-- Page Title -->
+    <div class="page-title-bar">
+      <div class="page-title-bar__title">Step 3: Agentic Workflows</div>
+      <div class="page-title-bar__desc">Combining deterministic diagnostics with LLM powered reasoning for autonomous alert resolution.</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="page-content">
+
+      <!-- Top row: Screenshot left, Decision right -->
+      <div class="split-pane mb-lg">
+
+        <!-- LEFT: Alert Agent Workflow screenshot (full, not zoomed) -->
+        <div class="split-pane__left">
+          <div class="screenshot-area screenshot-area--hero animate-fade-in" data-asset="alertAgentWorkflow" data-label="Screenshot: Alert Agent Workflow"></div>
+        </div>
+
+        <!-- RIGHT: Agentic Skills explainer + Agent Decision card -->
+        <div class="split-pane__right">
+          <div class="explainer animate-fade-in delay-1 mb-lg">
+            <div class="explainer__title">Agentic Skills</div>
+            <div class="explainer__text">
+              Add skills to any workflow to unlock a full agentic AI experience. Skills allow the agent to interpret workflow data in real time, make decisions on next steps, trigger additional workflows, or escalate to technicians and teams when human judgment is needed.
+            </div>
+          </div>
+          <div class="card card--elevated animate-fade-in delay-2">
+            <div class="card__title">Agentic Decision</div>
+            <div class="card__subtitle">LLM-enabled agent interprets structured signals</div>
+
+            <!-- Decision Card -->
+            <div class="decision-card mt-md">
+              <div class="decision-card__header">Agent Decision — ALR-29481</div>
+              <div class="decision-card__body">
+
+                <div class="decision-card__row">
+                  <div class="decision-card__label">Confidence</div>
+                  <div class="decision-card__value">
+                    <div class="confidence-meter">
+                      <div class="confidence-meter__bar">
+                        <div class="confidence-meter__fill" data-width="87%" style="width: 0%;"></div>
+                      </div>
+                      <span class="confidence-meter__label">87%</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="decision-card__row">
+                  <div class="decision-card__label">Root Cause</div>
+                  <div class="decision-card__value">
+                    Java process (PID 4821) consuming 91% CPU, correlated with deployment v3.12.1 at 09:55.
+                  </div>
+                </div>
+
+                <div class="decision-card__row">
+                  <div class="decision-card__label">Recommended Action</div>
+                  <div class="decision-card__value">
+                    <span class="pill pill--success">Restart AppService</span>
+                  </div>
+                </div>
+
+                <div class="decision-card__row">
+                  <div class="decision-card__label">Guardrail Checks</div>
+                  <div class="decision-card__value">
+                    <ul class="guardrail-list">
+                      <li>
+                        <span class="guardrail-check guardrail-check--pass">&#10003;</span>
+                        Action within approved runbook
+                      </li>
+                      <li>
+                        <span class="guardrail-check guardrail-check--pass">&#10003;</span>
+                        No active change freeze
+                      </li>
+                      <li>
+                        <span class="guardrail-check guardrail-check--pass">&#10003;</span>
+                        Service not critical-tier (Tier 2)
+                      </li>
+                      <li>
+                        <span class="guardrail-check guardrail-check--pass">&#10003;</span>
+                        Confidence above threshold (80%)
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="decision-card__row">
+                  <div class="decision-card__label">Triggered Action</div>
+                  <div class="decision-card__value">
+                    <span class="pill pill--accent">Executing: Service Restart Workflow</span>
+                    <div class="text-xs text-muted mt-sm">Automation ID: WF-RESTART-047 &middot; Initiated at 10:41:15</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="callout callout--warning mt-lg animate-fade-in delay-3">
+              <div class="callout__title">When Confidence is Low</div>
+              <div class="callout__text">
+                If the agent's confidence falls below the policy threshold (e.g., 80%), or if guardrail checks fail, RITA will not execute automatically. Instead, it creates an enriched incident ticket with full diagnostic context and routes to the appropriate human team for review.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /split-pane top -->
+
+      <!-- Full Workflow Builder Screenshot -->
+      <div class="screenshot-area screenshot-area--hero animate-fade-in delay-2" data-asset="workflowBuilder" data-label="Screenshot: Workflow Builder"></div>
+
+    </div><!-- /page-content -->
+
+    <!-- Bottom Nav -->
+    <nav id="nav-bar" class="nav-bar"></nav>
+
+  </div><!-- /app-shell -->
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

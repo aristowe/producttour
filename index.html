@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>RITA — Product Tour</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+
+    <!-- Header: white bar matching RITA Basic Chat -->
+    <header class="home-header">
+      <div class="home-header__left">
+        <!-- Hamburger -->
+        <button class="home-header__hamburger" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <!-- Resolve logo -->
+        <img src="assets/images/Resolve-Logo-Full-Color-RGB-159px.jpg" alt="Resolve" class="home-header__logo-img">
+      </div>
+      <div class="home-header__right">
+      </div>
+    </header>
+
+    <!-- Layout: sidebar + main -->
+    <div class="home-layout">
+
+      <!-- Sidebar: white, chat history -->
+      <aside class="home-sidebar">
+        <!-- New Chat button -->
+        <a href="easter-egg.html" class="home-newchat-btn">
+          New Chat
+          <span class="home-newchat-btn__shortcut">&#8984;K</span>
+        </a>
+
+        <!-- Chat history -->
+        <div class="home-sidebar__section">Last 7 Days</div>
+        <div class="home-chat-list">
+          <a href="knowledge.html" class="home-chat-item">
+            <span class="home-chat-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </span>
+            <span class="home-chat-item__text">Request for new VM</span>
+          </a>
+          <a href="automation.html" class="home-chat-item">
+            <span class="home-chat-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </span>
+            <span class="home-chat-item__text">VPN Assistance</span>
+          </a>
+          <a href="agentic.html" class="home-chat-item">
+            <span class="home-chat-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </span>
+            <span class="home-chat-item__text">Add to a distribution list</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main content -->
+      <main class="home-main">
+        <div class="home-main__body">
+          <div class="home-greeting animate-fade-in">
+
+            <!-- Resolve Mark icon -->
+            <div class="home-greeting__icon">
+              <img src="assets/images/Resolve-Mark.png" alt="Resolve" style="width: 100%; height: 100%; object-fit: contain;">
+            </div>
+
+            <!-- Greeting text -->
+            <div class="home-greeting__text">Hello, Friend. How can I help you today?</div>
+
+            <!-- 3×2 suggestion tiles -->
+            <div class="home-tiles">
+
+              <a href="knowledge.html" class="home-tile animate-fade-in delay-1">
+                <span class="home-tile__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                </span>
+                <span class="home-tile__label">Knowledge Answers</span>
+              </a>
+
+              <a href="automation.html" class="home-tile animate-fade-in delay-2">
+                <span class="home-tile__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+                  </svg>
+                </span>
+                <span class="home-tile__label">Ticket Automation</span>
+              </a>
+
+              <a href="agentic.html" class="home-tile animate-fade-in delay-3">
+                <span class="home-tile__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+                  </svg>
+                </span>
+                <span class="home-tile__label">Agentic Workflows</span>
+              </a>
+
+              <a href="autopilot.html" class="home-tile animate-fade-in delay-4">
+                <span class="home-tile__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                  </svg>
+                </span>
+                <span class="home-tile__label">AutoPilot Analysis</span>
+              </a>
+
+              <a href="roi.html" class="home-tile animate-fade-in delay-5">
+                <span class="home-tile__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/>
+                  </svg>
+                </span>
+                <span class="home-tile__label">ROI Dashboard</span>
+              </a>
+
+              <a href="knowledge.html" class="home-tile animate-fade-in delay-6" style="background: #0066FF; color: #fff; border-color: #0066FF;">
+                <span class="home-tile__icon" style="color: #fff;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="5 3 19 12 5 21 5 3"/>
+                  </svg>
+                </span>
+                <span class="home-tile__label" style="color: #fff;">Start Full Tour</span>
+              </a>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Bottom input bar -->
+        <div class="home-bottom-bar">
+          <!-- Filter pills -->
+          <div class="home-filters">
+            <span class="home-filters__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+              </svg>
+            </span>
+            <span class="home-filter-pill">Approval <span class="home-filter-pill__close">&times;</span></span>
+            <span class="home-filter-pill">Ticket <span class="home-filter-pill__close">&times;</span></span>
+            <span class="home-filter-pill">Conversation <span class="home-filter-pill__close">&times;</span></span>
+          </div>
+
+          <!-- Input area -->
+          <div class="home-input-area">
+            <!-- Attachment icon -->
+            <button class="home-attach-btn" aria-label="Attach file">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/>
+              </svg>
+            </button>
+            <!-- Text input -->
+            <input type="text" class="home-input-field" placeholder="Ask me anything..." readonly>
+            <!-- Send button -->
+            <button class="home-send-btn" aria-label="Send">
+              <svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </main>
+
+    </div><!-- /home-layout -->
+
+  </div><!-- /app-shell -->
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

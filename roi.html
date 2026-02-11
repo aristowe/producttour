@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>RITA — ROI Dashboard</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+
+    <!-- Header -->
+    <header class="app-header">
+      <div class="app-header__brand">
+        <img src="assets/images/Resolve-Logo-Full-Color-RGB-159px.jpg" alt="Resolve" class="app-header__logo">
+      </div>
+      <div class="app-header__nav">
+        <a href="index.html" class="app-header__home-btn">&#8592; Home</a>
+      </div>
+    </header>
+
+    <!-- Tour Progress -->
+    <div id="tour-progress" class="tour-progress"></div>
+
+    <!-- Page Title -->
+    <div class="page-title-bar">
+      <div class="page-title-bar__title">Step 5: ROI Dashboard</div>
+      <div class="page-title-bar__desc">Calculate the time and cost savings from RITA automation at your organization's scale.</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="page-content">
+
+      <!-- Top row: Beyond Cost Savings (left) + Top Workflows (right) -->
+      <div class="split-pane mb-lg">
+
+        <!-- LEFT: Beyond Cost Savings -->
+        <div class="split-pane__left">
+          <div class="callout callout--info animate-fade-in">
+            <div class="callout__title">Beyond Cost Savings</div>
+            <div class="callout__text">
+              ROI from RITA extends beyond direct cost reduction. Faster resolution times improve employee satisfaction scores, reduced ticket backlog frees up senior engineers for strategic work, and consistent execution eliminates human error in repetitive processes. The analytics dashboard tracks all of these dimensions over time.
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Top Cost-Saving Workflows — 5 foundational -->
+        <div class="split-pane__right">
+          <div class="card card--elevated animate-fade-in delay-1">
+            <div class="card__title">Top Cost-Saving Workflows</div>
+            <div class="card__subtitle">5 Foundational Automations — last 30 days</div>
+
+            <div class="data-table-container mt-md">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Workflow</th>
+                    <th>Runs</th>
+                    <th>Savings</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Password Resets &amp; Account Unlocks</td>
+                    <td>4,820</td>
+                    <td style="font-weight: 700; color: var(--color-success);">$68.3K</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Access Requests</td>
+                    <td>2,140</td>
+                    <td style="font-weight: 700; color: var(--color-success);">$45.5K</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Software Installations &amp; Licensing</td>
+                    <td>1,650</td>
+                    <td style="font-weight: 700;">$31.2K</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Email &amp; Collaboration Tool Issues</td>
+                    <td>1,280</td>
+                    <td style="font-weight: 700;">$18.7K</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>VPN Troubleshooting &amp; Remediation</td>
+                    <td>890</td>
+                    <td style="font-weight: 700;">$12.4K</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /split-pane top -->
+
+      <!-- Screenshot of actual ROI dashboard -->
+      <div class="screenshot-area mb-lg" data-asset="roiDashboard" data-label="Screenshot: RITA ROI Analytics Dashboard"></div>
+
+      <div class="split-pane">
+
+        <!-- LEFT: Calculator Inputs -->
+        <div class="split-pane__left">
+          <div class="card card--elevated animate-fade-in">
+            <div class="card__title">ROI Calculator</div>
+            <div class="card__subtitle">Adjust inputs to estimate your savings</div>
+
+            <div class="roi-inputs mt-lg">
+
+              <div class="roi-input-group">
+                <label for="roi-rate">Blended Hourly Rate ($)</label>
+                <input type="number" id="roi-rate" value="85" min="1" max="500" step="5">
+              </div>
+
+              <div class="roi-input-group">
+                <label for="roi-minutes">Avg. Manual Minutes per Task</label>
+                <input type="number" id="roi-minutes" value="12" min="1" max="120" step="1">
+              </div>
+
+              <div class="roi-input-group">
+                <label for="roi-volume">Monthly Task Volume</label>
+                <input type="number" id="roi-volume" value="600" min="1" max="100000" step="50">
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Assumptions -->
+          <div class="assumptions mt-lg animate-fade-in delay-2">
+            <strong>Assumptions</strong>
+            <ul style="margin-top: 8px; padding-left: 20px; line-height: 1.8;">
+              <li>All tasks are fully automated (no manual intervention).</li>
+              <li>Blended rate includes salary, benefits, and overhead.</li>
+              <li>Savings assume 100% automation rate for the estimated volume.</li>
+              <li>Actual results will vary based on workflow complexity, approval requirements, and exception rates.</li>
+            </ul>
+            <p style="margin-top: 12px; font-style: italic;">
+              These values are estimates for illustration purposes. Consult your operations team for precise benchmarks.
+            </p>
+          </div>
+        </div><!-- /split-pane__left -->
+
+        <!-- RIGHT: Computed Outputs -->
+        <div class="split-pane__right">
+          <div class="card card--elevated animate-fade-in delay-1">
+            <div class="card__title">Estimated Savings</div>
+            <div class="card__subtitle">Real-time calculations based on your inputs</div>
+
+            <div class="roi-outputs mt-lg">
+
+              <div class="roi-output-card">
+                <div class="roi-output-card__value" id="roi-hours-saved">120.0</div>
+                <div class="roi-output-card__label">Hours Saved / Month</div>
+              </div>
+
+              <div class="roi-output-card roi-output-card--highlight">
+                <div class="roi-output-card__value" id="roi-cost-month">$10.2K</div>
+                <div class="roi-output-card__label">Cost Saved / Month</div>
+              </div>
+
+              <div class="roi-output-card roi-output-card--highlight">
+                <div class="roi-output-card__value" id="roi-cost-year">$122.4K</div>
+                <div class="roi-output-card__label">Cost Saved / Year</div>
+              </div>
+
+              <div class="roi-output-card">
+                <div class="roi-output-card__value" id="roi-runs">600</div>
+                <div class="roi-output-card__label">Automation Runs / Month</div>
+              </div>
+
+            </div>
+          </div>
+        </div><!-- /split-pane__right -->
+
+      </div><!-- /split-pane -->
+    </div><!-- /page-content -->
+
+    <!-- Bottom Nav -->
+    <nav id="nav-bar" class="nav-bar"></nav>
+
+  </div><!-- /app-shell -->
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
