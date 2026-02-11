@@ -1506,6 +1506,11 @@ img {
   margin: var(--space-md) 0;
 }
 
+.split-pane__left > .callout:first-child,
+.split-pane__right > .callout:first-child {
+  margin-top: 0;
+}
+
 .callout--info {
   background: #eff6ff;
   border: 1px solid #bfdbfe;
