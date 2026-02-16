@@ -94,6 +94,7 @@ body {
   color: var(--text-primary);
   line-height: 1.5;
   min-height: 100vh;
+  min-height: -webkit-fill-available;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
@@ -124,7 +125,10 @@ img {
   align-items: center;
   justify-content: space-between;
   padding: 0 var(--space-lg);
-  height: 56px;
+  padding-top: env(safe-area-inset-top);
+  padding-left: max(var(--space-lg), env(safe-area-inset-left));
+  padding-right: max(var(--space-lg), env(safe-area-inset-right));
+  height: calc(56px + env(safe-area-inset-top));
   position: sticky;
   top: 0;
   z-index: 100;
@@ -334,6 +338,9 @@ img {
   justify-content: space-between;
   align-items: center;
   padding: var(--space-md) var(--space-lg);
+  padding-bottom: max(var(--space-md), env(safe-area-inset-bottom));
+  padding-left: max(var(--space-lg), env(safe-area-inset-left));
+  padding-right: max(var(--space-lg), env(safe-area-inset-right));
   background: var(--bg-card);
   border-top: 1px solid var(--border-color);
   position: sticky;
@@ -703,7 +710,7 @@ img {
 /* --- Chat UI (Home page style) --- */
 .chat-layout {
   display: flex;
-  height: calc(100vh - 56px);
+  height: calc(100vh - 56px - env(safe-area-inset-top));
   overflow: hidden;
 }
 
@@ -1863,7 +1870,10 @@ img {
   align-items: center;
   justify-content: space-between;
   padding: 0 var(--space-lg);
-  height: 56px;
+  padding-top: env(safe-area-inset-top);
+  padding-left: max(var(--space-lg), env(safe-area-inset-left));
+  padding-right: max(var(--space-lg), env(safe-area-inset-right));
+  height: calc(56px + env(safe-area-inset-top));
   border-bottom: 1px solid var(--border-color);
   position: sticky;
   top: 0;
@@ -1959,7 +1969,7 @@ img {
 /* Home layout: sidebar + main */
 .home-layout {
   display: flex;
-  height: calc(100vh - 56px);
+  height: calc(100vh - 56px - env(safe-area-inset-top));
   overflow: hidden;
   background: #ffffff;
 }
@@ -2167,6 +2177,9 @@ img {
   align-items: center;
   gap: var(--space-md);
   padding: var(--space-md) var(--space-lg);
+  padding-bottom: max(var(--space-md), env(safe-area-inset-bottom));
+  padding-left: max(var(--space-lg), env(safe-area-inset-left));
+  padding-right: max(var(--space-lg), env(safe-area-inset-right));
   border-top: 1px solid var(--border-color);
   background: #ffffff;
 }
