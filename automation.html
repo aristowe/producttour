@@ -31,40 +31,84 @@
 
     <!-- Page Title -->
     <div class="page-title-bar">
-      <div class="page-title-bar__title">Step 2: Ticket Automation</div>
-      <div class="page-title-bar__desc">RITA executes deterministic, governed workflows to fulfill service requests with full audit trails.</div>
+      <div class="page-title-bar__title">Step 2: Zero Touch Ticket Resolution</div>
+      <div class="page-title-bar__desc">Every step in this workflow is predefined, auditable, and governed by policy. RITA follows the exact sequence — no improvisation, no skipped steps. Approval rules, RBAC checks, and audit logging are enforced automatically. This is how high-volume, repeatable tasks get automated safely at enterprise scale.</div>
     </div>
 
     <!-- Main Content -->
     <div class="page-content">
 
-      <!-- Top row: Chat left, Explainer right -->
+      <!-- Speed Benchmark -->
+      <div class="callout callout--success mb-lg animate-fade-in">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: var(--space-lg);">
+          <div>
+            <div style="font-size: 1.1rem; font-weight: 700; color: var(--color-success); margin-bottom: 4px;">Average completion time: 38 seconds</div>
+            <div style="font-size: 0.85rem; color: var(--text-secondary);">Manual process: 14 minutes</div>
+          </div>
+          <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-success);">22x faster</div>
+        </div>
+      </div>
+
+      <!-- Top row: Two chat boxes side by side -->
       <div class="split-pane mb-lg">
 
-        <!-- LEFT: Teams Chat compact -->
+        <!-- LEFT: Initial request -->
         <div class="split-pane__left">
-          <div class="card card--elevated animate-fade-in" style="max-width: 560px;">
-            <div class="card__title" style="font-size: 0.85rem; margin-bottom: var(--space-sm);">Chat with RITA</div>
+          <div class="card card--elevated animate-fade-in">
             <div style="display: flex; flex-direction: column; gap: var(--space-sm);">
               <!-- User message -->
               <div class="chat-message chat-message--user" style="max-width: 100%;">
-                <div class="chat-message__avatar">AS</div>
+                <div class="chat-message__avatar">OM</div>
                 <div class="chat-message__body">
-                  <div class="chat-message__sender">Ari Stowe <span class="chat-message__time">2:14 PM</span></div>
+                  <div class="chat-message__sender">Otto Mation <span class="chat-message__time">2:14 PM</span></div>
                   <div class="chat-message__bubble">
                     <span class="type-in" data-text="Can you add me to the Finance Updates distribution list?"></span>
                   </div>
                 </div>
               </div>
-              <!-- RITA response -->
-              <div class="chat-message chat-message--bot animate-fade-in delay-3" style="max-width: 100%;">
+              <!-- RITA response - submitted for approval -->
+              <div class="chat-message chat-message--bot animate-fade-in delay-2" style="max-width: 100%;">
                 <div class="chat-message__avatar" style="padding: 0; overflow: hidden;">
                   <img src="assets/images/Resolve-Mark.png" alt="RITA" style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
                 <div class="chat-message__body">
                   <div class="chat-message__sender">RITA <span class="chat-message__time">2:14 PM</span></div>
                   <div class="chat-message__bubble">
-                    Done — I've submitted the request and confirmed your membership in the <strong>Finance Updates</strong> distribution list.
+                    I've submitted your request to add you to the <strong>Finance Updates</strong> distribution list. Awaiting manager approval...
+                    <div class="confirmation-card mt-md" style="background: #fffbeb; border-color: #fde68a;">
+                      <div class="confirmation-card__row">
+                        <span class="confirmation-card__label">Request ID</span>
+                        <span class="confirmation-card__value">REQ-20260209-4872</span>
+                      </div>
+                      <div class="confirmation-card__row">
+                        <span class="confirmation-card__label">Status</span>
+                        <span class="confirmation-card__value" style="color: var(--color-warning);">⏳ Pending Approval</span>
+                      </div>
+                      <div class="confirmation-card__row">
+                        <span class="confirmation-card__label">Approver</span>
+                        <span class="confirmation-card__value">Sarah Chen (Finance Manager)</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: After approval -->
+        <div class="split-pane__right">
+          <div class="card card--elevated animate-fade-in delay-1">
+            <div style="display: flex; flex-direction: column; gap: var(--space-sm);">
+              <!-- RITA final response -->
+              <div class="chat-message chat-message--bot" style="max-width: 100%;">
+                <div class="chat-message__avatar" style="padding: 0; overflow: hidden;">
+                  <img src="assets/images/Resolve-Mark.png" alt="RITA" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <div class="chat-message__body">
+                  <div class="chat-message__sender">RITA <span class="chat-message__time">2:18 PM</span></div>
+                  <div class="chat-message__bubble">
+                    ✓ Approved! I've added you to the <strong>Finance Updates</strong> distribution list.
                     <div class="confirmation-card mt-md">
                       <div class="confirmation-card__row">
                         <span class="confirmation-card__label">Request ID</span>
@@ -75,8 +119,8 @@
                         <span class="confirmation-card__value" style="color: var(--color-success);">&#10003; Completed</span>
                       </div>
                       <div class="confirmation-card__row">
-                        <span class="confirmation-card__label">Distribution List</span>
-                        <span class="confirmation-card__value">Finance Updates</span>
+                        <span class="confirmation-card__label">Completed In</span>
+                        <span class="confirmation-card__value" style="color: var(--color-success); font-weight: 700;">38 seconds</span>
                       </div>
                     </div>
                   </div>
@@ -86,17 +130,27 @@
           </div>
         </div>
 
-        <!-- RIGHT: Deterministic Orchestration explainer -->
-        <div class="split-pane__right">
-          <div class="explainer animate-fade-in delay-2">
-            <div class="explainer__title">Deterministic Orchestration</div>
-            <div class="explainer__text">
-              Every step in this workflow is predefined, auditable, and governed by policy. RITA follows the exact sequence no improvisation, no skipped steps. Approval rules, RBAC checks, and audit logging are enforced automatically. This is how high-volume, repeatable tasks get automated safely at enterprise scale.
-            </div>
-          </div>
-        </div>
-
       </div><!-- /split-pane top row -->
+
+      <!-- Connected Systems -->
+      <div class="callout callout--info mb-lg animate-fade-in delay-2">
+        <div class="callout__title">Systems RITA Can Automate</div>
+        <div class="callout__text mb-md">
+          RITA connects to your existing enterprise systems to execute workflows end-to-end without manual handoffs.
+        </div>
+        <div class="pills-row">
+          <span class="pill pill--accent">Active Directory</span>
+          <span class="pill pill--accent">ServiceNow</span>
+          <span class="pill pill--accent">Okta</span>
+          <span class="pill pill--accent">Azure AD</span>
+          <span class="pill pill--accent">JIRA</span>
+          <span class="pill pill--accent">Slack</span>
+          <span class="pill pill--accent">Microsoft Teams</span>
+          <span class="pill pill--accent">SAP</span>
+          <span class="pill pill--accent">Salesforce</span>
+          <a href="https://resolve.io/capabilities/integrations" class="pill">+ 150 more integrations</a>
+        </div>
+      </div>
 
       <!-- Main: Distribution List Workflow Screenshot -->
       <div class="screenshot-area screenshot-area--hero mb-lg animate-fade-in delay-1" data-asset="distributionListWF" data-label="Screenshot: Distribution List Add Workflow"></div>

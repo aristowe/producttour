@@ -31,17 +31,15 @@
 
     <!-- Page Title -->
     <div class="page-title-bar">
-      <div class="page-title-bar__title">Step 5: ROI Dashboard</div>
+      <div class="page-title-bar__title">Step 5: See The ROI</div>
       <div class="page-title-bar__desc">Calculate the time and cost savings from RITA automation at your organization's scale.</div>
     </div>
 
     <!-- Main Content -->
     <div class="page-content">
 
-      <!-- Top row: Beyond Cost Savings (left) + Top Workflows (right) -->
+      <!-- Beyond Cost Savings - at the top -->
       <div class="split-pane mb-lg">
-
-        <!-- LEFT: Beyond Cost Savings -->
         <div class="split-pane__left">
           <div class="callout callout--info animate-fade-in">
             <div class="callout__title">Beyond Cost Savings</div>
@@ -51,12 +49,11 @@
           </div>
         </div>
 
-        <!-- RIGHT: Top Cost-Saving Workflows — 5 foundational -->
+        <!-- RIGHT: Top Cost-Saving Workflows -->
         <div class="split-pane__right">
           <div class="card card--elevated animate-fade-in delay-1">
             <div class="card__title">Top Cost-Saving Workflows</div>
             <div class="card__subtitle">5 Foundational Automations — last 30 days</div>
-
             <div class="data-table-container mt-md">
               <table class="data-table">
                 <thead>
@@ -101,15 +98,18 @@
                 </tbody>
               </table>
             </div>
+            <div style="margin-top: var(--space-md); padding: var(--space-sm); background: #f0f9ff; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--text-secondary); font-style: italic;">
+              Based on real Resolve customer deployments.
+            </div>
           </div>
         </div>
-
-      </div><!-- /split-pane top -->
+      </div>
 
       <!-- Screenshot of actual ROI dashboard -->
-      <div class="screenshot-area mb-lg" data-asset="roiDashboard" data-label="Screenshot: RITA ROI Analytics Dashboard"></div>
+      <div class="screenshot-area mb-lg animate-fade-in delay-2" data-asset="roiDashboard" data-label="Screenshot: RITA ROI Analytics Dashboard"></div>
 
-      <div class="split-pane">
+      <!-- Calculator -->
+      <div class="split-pane mb-lg">
 
         <!-- LEFT: Calculator Inputs -->
         <div class="split-pane__left">
@@ -135,20 +135,6 @@
               </div>
 
             </div>
-          </div>
-
-          <!-- Assumptions -->
-          <div class="assumptions mt-lg animate-fade-in delay-2">
-            <strong>Assumptions</strong>
-            <ul style="margin-top: 8px; padding-left: 20px; line-height: 1.8;">
-              <li>All tasks are fully automated (no manual intervention).</li>
-              <li>Blended rate includes salary, benefits, and overhead.</li>
-              <li>Savings assume 100% automation rate for the estimated volume.</li>
-              <li>Actual results will vary based on workflow complexity, approval requirements, and exception rates.</li>
-            </ul>
-            <p style="margin-top: 12px; font-style: italic;">
-              These values are estimates for illustration purposes. Consult your operations team for precise benchmarks.
-            </p>
           </div>
         </div><!-- /split-pane__left -->
 
@@ -181,10 +167,27 @@
               </div>
 
             </div>
+
+            <!-- Prominent CTA Button -->
+            <div style="margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-color); text-align: center;">
+              <div style="font-size: 1.1rem; font-weight: 700; margin-bottom: var(--space-md); color: var(--text-primary);">
+                Ready to achieve these savings in your environment?
+              </div>
+              <a href="https://www.resolve.io/request-demo" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; gap: 12px; padding: 16px 32px; background: #0066FF; color: #fff; border: none; border-radius: 8px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: all 150ms ease; text-decoration: none; box-shadow: 0 4px 12px rgba(0,102,255,0.3);" onmouseover="this.style.background='#0052cc'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(0,102,255,0.4)'" onmouseout="this.style.background='#0066FF'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,102,255,0.3)'">
+                Talk to a Resolve Expert →
+              </a>
+            </div>
           </div>
         </div><!-- /split-pane__right -->
 
       </div><!-- /split-pane -->
+
+      <!-- Assumptions - styled as subtle footnote -->
+      <div style="padding: var(--space-md); background: #f9fafb; border-left: 3px solid #d1d5db; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--text-secondary); margin-bottom: var(--space-lg);">
+        <strong style="color: var(--text-primary);">Assumptions:</strong>
+        All tasks are fully automated (no manual intervention). Blended rate includes salary, benefits, and overhead. Savings assume 100% automation rate for the estimated volume. Actual results will vary based on workflow complexity, approval requirements, and exception rates. These values are estimates for illustration purposes. Consult your operations team for precise benchmarks.
+      </div>
+
     </div><!-- /page-content -->
 
     <!-- Bottom Nav -->

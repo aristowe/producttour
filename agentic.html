@@ -31,30 +31,27 @@
 
     <!-- Page Title -->
     <div class="page-title-bar">
-      <div class="page-title-bar__title">Step 3: Agentic Workflows</div>
-      <div class="page-title-bar__desc">Combining deterministic diagnostics with LLM powered reasoning for autonomous alert resolution.</div>
+      <div class="page-title-bar__title">Step 3: Self-Healing IT Operations</div>
+      <div class="page-title-bar__desc">Add skills to any workflow to unlock a full agentic AI experience. Skills allow the agent to interpret workflow data in real time, make decisions on next steps, trigger additional workflows, or escalate to technicians and teams when human judgment is needed.</div>
     </div>
 
     <!-- Main Content -->
     <div class="page-content">
 
-      <!-- Top row: Screenshot left, Decision right -->
+      <!-- When Confidence is Low - moved to top -->
+      <div class="callout callout--warning mb-lg animate-fade-in">
+        <div class="callout__title">Guardrails & Oversight</div>
+        <div class="callout__text">
+          <strong>Resolve only acts autonomously when confidence exceeds your defined threshold.</strong> If the agent's confidence falls below the policy threshold (e.g., 80%), or if guardrail checks fail, RITA will not execute automatically. Instead, it creates an enriched incident ticket with full diagnostic context and routes to the appropriate human team for review. You set the bar.
+        </div>
+      </div>
+
+      <!-- Top row: Decision card first, then explainer -->
       <div class="split-pane mb-lg">
 
-        <!-- LEFT: Alert Agent Workflow screenshot (full, not zoomed) -->
+        <!-- LEFT: Agent Decision card (moved from right) -->
         <div class="split-pane__left">
-          <div class="screenshot-area screenshot-area--hero animate-fade-in" data-asset="alertAgentWorkflow" data-label="Screenshot: Alert Agent Workflow"></div>
-        </div>
-
-        <!-- RIGHT: Agentic Skills explainer + Agent Decision card -->
-        <div class="split-pane__right">
-          <div class="explainer animate-fade-in delay-1 mb-lg">
-            <div class="explainer__title">Agentic Skills</div>
-            <div class="explainer__text">
-              Add skills to any workflow to unlock a full agentic AI experience. Skills allow the agent to interpret workflow data in real time, make decisions on next steps, trigger additional workflows, or escalate to technicians and teams when human judgment is needed.
-            </div>
-          </div>
-          <div class="card card--elevated animate-fade-in delay-2">
+          <div class="card card--elevated animate-fade-in">
             <div class="card__title">Agentic Decision</div>
             <div class="card__subtitle">LLM-enabled agent interprets structured signals</div>
 
@@ -71,6 +68,9 @@
                         <div class="confidence-meter__fill" data-width="87%" style="width: 0%;"></div>
                       </div>
                       <span class="confidence-meter__label">87%</span>
+                    </div>
+                    <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 8px; font-style: italic;">
+                      Resolve only acts autonomously when confidence exceeds your defined threshold; you set the bar.
                     </div>
                   </div>
                 </div>
@@ -123,14 +123,11 @@
 
               </div>
             </div>
-
-            <div class="callout callout--warning mt-lg animate-fade-in delay-3">
-              <div class="callout__title">When Confidence is Low</div>
-              <div class="callout__text">
-                If the agent's confidence falls below the policy threshold (e.g., 80%), or if guardrail checks fail, RITA will not execute automatically. Instead, it creates an enriched incident ticket with full diagnostic context and routes to the appropriate human team for review.
-              </div>
-            </div>
           </div>
+        </div>
+
+        <!-- RIGHT: Empty for visual balance - screenshot removed as requested -->
+        <div class="split-pane__right">
         </div>
 
       </div><!-- /split-pane top -->

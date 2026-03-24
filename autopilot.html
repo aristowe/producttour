@@ -31,67 +31,70 @@
 
     <!-- Page Title -->
     <div class="page-title-bar">
-      <div class="page-title-bar__title">Step 4: AutoPilot Ticket Analysis</div>
-      <div class="page-title-bar__desc">ML-driven ticket clustering identifies the highest-value automation opportunities in your ITSM data.</div>
+      <div class="page-title-bar__title">Step 4: Uncover Automation Opportunities</div>
+      <div class="page-title-bar__desc">AutoPilot analyzed 103,000 tickets and found 2,517 automation opportunities — here's how it works.</div>
     </div>
 
     <!-- Main Content -->
     <div class="page-content">
-
-      <!-- Top row: How AutoPilot Works (left) + Top Opportunities (right) -->
-      <div class="split-pane mb-lg">
-
-        <!-- LEFT: How AutoPilot Works -->
-        <div class="split-pane__left">
-          <div class="explainer animate-fade-in">
-            <div class="explainer__title">How AutoPilot Works</div>
-            <div class="explainer__text">
-              AutoPilot ingests historical tickets from your ITSM system. Machine learning models cluster tickets by semantic similarity — not just keyword matching — to identify natural groupings. Each cluster is scored for automation potential based on volume, complexity, and existing knowledge coverage. The result is a prioritized roadmap for building automations that deliver the greatest impact.
-            </div>
-          </div>
+      <!-- How AutoPilot Works - moved below stats -->
+      <div class="explainer mb-lg animate-fade-in delay-2">
+        <div class="explainer__title">How AutoPilot Works</div>
+        <div class="explainer__text">
+          AutoPilot ingests historical tickets from your ITSM system. Machine learning models cluster tickets by semantic similarity — not just keyword matching — to identify natural groupings. Each cluster is scored for automation potential based on volume, complexity, and existing knowledge coverage. The result is a prioritized roadmap for building automations that deliver the greatest impact.
         </div>
+      </div>
 
-        <!-- RIGHT: Top Automation Opportunities — 5 foundational -->
-        <div class="split-pane__right">
-          <div class="callout callout--success animate-fade-in delay-1">
-            <div class="callout__title">Top Automation Opportunities</div>
-            <div class="callout__text">
-              Based on volume and complexity analysis, these five foundational categories offer the highest ROI for automation:
-            </div>
-            <div class="mt-md">
-              <div class="pills-row" style="flex-wrap: wrap;">
-                <span class="pill pill--success">Password Resets &amp; Account Unlocks</span>
-                <span class="pill pill--success">Access Requests</span>
-                <span class="pill pill--success">Software Installations &amp; Licensing</span>
-                <span class="pill pill--accent">Email &amp; Collaboration Tool Issues</span>
-                <span class="pill pill--accent">VPN Troubleshooting &amp; Remediation</span>
-              </div>
-            </div>
-          </div>
+      <!-- Hero Stats Row - moved to top, larger size -->
+      <div class="dashboard-grid mb-lg animate-fade-in" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-lg);">
+        <div class="stat-card" style="padding: var(--space-xl); border: 2px solid var(--border-color);">
+          <div class="stat-card__value" style="font-size: 3rem;">103K</div>
+          <div class="stat-card__label" style="font-size: 1rem; margin-top: var(--space-sm);">Total Tickets Analyzed</div>
         </div>
-
-      </div><!-- /split-pane top -->
+        <div class="stat-card" style="padding: var(--space-xl); border: 2px solid var(--border-color);">
+          <div class="stat-card__value" style="font-size: 3rem;">12</div>
+          <div class="stat-card__label" style="font-size: 1rem; margin-top: var(--space-sm);">Ticket Groups Found</div>
+        </div>
+        <div class="stat-card stat-card--accent" style="padding: var(--space-xl); border: 2px solid var(--color-accent);">
+          <div class="stat-card__value" style="font-size: 3rem;">2,517</div>
+          <div class="stat-card__label" style="font-size: 1rem; margin-top: var(--space-sm);">Automatable Tickets</div>
+        </div>
+        <div class="stat-card stat-card--success" style="padding: var(--space-xl); border: 2px solid var(--color-success);">
+          <div class="stat-card__value" style="font-size: 3rem;">76%</div>
+          <div class="stat-card__label" style="font-size: 1rem; margin-top: var(--space-sm);">Knowledge Found</div>
+        </div>
+      </div>
 
       <!-- Main Screenshot: Ticket Analysis -->
       <div class="screenshot-area screenshot-area--hero mb-lg animate-fade-in delay-1" data-asset="ticketAnalysis" data-label="Screenshot: RITA AutoPilot Ticket Analysis"></div>
 
-      <!-- Stats Row -->
-      <div class="dashboard-grid mb-lg animate-fade-in delay-2">
-        <div class="stat-card">
-          <div class="stat-card__value">103K</div>
-          <div class="stat-card__label">Total Tickets</div>
+      <!-- Top Automation Opportunities with volume context -->
+      <div class="callout callout--success mb-lg animate-fade-in delay-3">
+        <div class="callout__title">Top Automation Opportunities</div>
+        <div class="callout__text mb-md">
+          Based on volume and complexity analysis, these five foundational categories offer the highest ROI for automation:
         </div>
-        <div class="stat-card">
-          <div class="stat-card__value">12</div>
-          <div class="stat-card__label">Ticket Groups</div>
-        </div>
-        <div class="stat-card stat-card--accent">
-          <div class="stat-card__value">2,517</div>
-          <div class="stat-card__label">Automatable</div>
-        </div>
-        <div class="stat-card stat-card--success">
-          <div class="stat-card__value">76%</div>
-          <div class="stat-card__label">Knowledge Found</div>
+        <div style="display: flex; flex-direction: column; gap: var(--space-sm);">
+          <div style="padding: var(--space-md); background: rgba(255,255,255,0.5); border-radius: var(--radius-md);">
+            <span class="pill pill--success" style="margin-right: var(--space-sm);">Password Resets & Account Unlocks</span>
+            <span style="font-size: 0.8rem; color: var(--text-secondary);">Typically 30–40% of all L1 ticket volume</span>
+          </div>
+          <div style="padding: var(--space-md); background: rgba(255,255,255,0.5); border-radius: var(--radius-md);">
+            <span class="pill pill--success" style="margin-right: var(--space-sm);">Access Requests</span>
+            <span style="font-size: 0.8rem; color: var(--text-secondary);">Typically 15–25% of all L1 ticket volume</span>
+          </div>
+          <div style="padding: var(--space-md); background: rgba(255,255,255,0.5); border-radius: var(--radius-md);">
+            <span class="pill pill--success" style="margin-right: var(--space-sm);">Software Installations & Licensing</span>
+            <span style="font-size: 0.8rem; color: var(--text-secondary);">Typically 10–15% of all L1 ticket volume</span>
+          </div>
+          <div style="padding: var(--space-md); background: rgba(255,255,255,0.5); border-radius: var(--radius-md);">
+            <span class="pill pill--accent" style="margin-right: var(--space-sm);">Email & Collaboration Tool Issues</span>
+            <span style="font-size: 0.8rem; color: var(--text-secondary);">Typically 8–12% of all L1 ticket volume</span>
+          </div>
+          <div style="padding: var(--space-md); background: rgba(255,255,255,0.5); border-radius: var(--radius-md);">
+            <span class="pill pill--accent" style="margin-right: var(--space-sm);">VPN Troubleshooting & Remediation</span>
+            <span style="font-size: 0.8rem; color: var(--text-secondary);">Typically 5–8% of all L1 ticket volume</span>
+          </div>
         </div>
       </div>
 
@@ -101,7 +104,7 @@
         <div class="split-pane__left">
 
           <!-- ML Categorization Chart -->
-          <div class="card animate-fade-in delay-3">
+          <div class="card animate-fade-in delay-4">
             <div class="card__title">ML Categorization</div>
             <div class="card__subtitle">Ticket volume by cluster</div>
             <div class="bar-chart mt-md">
@@ -150,9 +153,9 @@
         <div class="split-pane__right">
 
           <!-- Sample Tickets Table -->
-          <div class="card animate-fade-in delay-3">
+          <div class="card animate-fade-in delay-4">
             <div class="card__title">Sample Clustered Tickets</div>
-            <div class="card__subtitle">Representative tickets from each group</div>
+            <div class="card__subtitle">Representative tickets from each group (click to see automation)</div>
             <div class="data-table-container mt-md">
               <table class="data-table">
                 <thead>
@@ -164,22 +167,22 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr style="cursor: pointer; transition: background 150ms ease;" onmouseover="this.style.background='#f0f9ff'" onmouseout="this.style.background=''" onclick="alert('RITA Automation:\n\n1. Verify identity via SSO\n2. Reset password in Active Directory\n3. Unlock account\n4. Send confirmation email\n5. Close ticket automatically\n\nEstimated completion: 45 seconds')">
                     <td>INC-41002</td>
                     <td>Password Reset</td>
-                    <td>Account locked after failed login attempts</td>
+                    <td>Account locked after failed login attempts 👆 Click</td>
                     <td><span class="pill pill--warning">Open</span></td>
                   </tr>
-                  <tr>
+                  <tr style="cursor: pointer; transition: background 150ms ease;" onmouseover="this.style.background='#f0f9ff'" onmouseout="this.style.background=''" onclick="alert('RITA Automation:\n\n1. Verify user identity & manager\n2. Submit approval request\n3. Grant SharePoint permissions via API\n4. Send confirmation to user\n5. Close ticket\n\nEstimated completion: 2 minutes (includes approval time)')">
                     <td>INC-41018</td>
                     <td>Access Request</td>
-                    <td>Need access to Finance SharePoint site</td>
+                    <td>Need access to Finance SharePoint site 👆 Click</td>
                     <td><span class="pill pill--success">Resolved</span></td>
                   </tr>
-                  <tr>
+                  <tr style="cursor: pointer; transition: background 150ms ease;" onmouseover="this.style.background='#f0f9ff'" onmouseout="this.style.background=''" onclick="alert('RITA Automation:\n\n1. Check software licensing availability\n2. Deploy via SCCM/Intune\n3. Verify installation\n4. Update asset inventory\n5. Notify user & close ticket\n\nEstimated completion: 8 minutes')">
                     <td>INC-41025</td>
                     <td>Software</td>
-                    <td>Install Adobe Creative Suite on new laptop</td>
+                    <td>Install Adobe Creative Suite on new laptop 👆 Click</td>
                     <td><span class="pill pill--warning">Open</span></td>
                   </tr>
                   <tr>

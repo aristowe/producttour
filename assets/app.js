@@ -22,6 +22,7 @@ const TOUR_ORDER = [
   'agentic.html',
   'autopilot.html',
   'roi.html',
+  'tour-complete.html',
 ];
 
 const TOUR_LABELS = [
@@ -31,6 +32,7 @@ const TOUR_LABELS = [
   'Agentic',
   'AutoPilot',
   'ROI',
+  'Complete',
 ];
 
 // ---------- Navigation Helpers ----------
