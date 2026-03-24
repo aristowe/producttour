@@ -124,16 +124,12 @@ function renderNavBar() {
     html += `<button class="btn btn-secondary" onclick="goBack()">&#8592; ${TOUR_LABELS[idx - 1]}</button>`;
   }
 
-  // Center: Home button (show on non-home pages)
-  if (!isFirst) {
-    html += `<button class="btn btn-dark btn-sm" onclick="goHome()">&#8962; Home</button>`;
-  } else {
-    html += '<div></div>';
-  }
+  // Center: Empty (removed Home button to maintain tour momentum)
+  html += '<div></div>';
 
   // Next button
   if (isLast) {
-    html += `<button class="btn btn-primary" onclick="goHome()">&#8962; Back to Home</button>`;
+    html += `<button class="btn btn-primary" onclick="goHome()">&#8962; Home</button>`;
   } else {
     html += `<button class="btn btn-primary" onclick="goNext()">${TOUR_LABELS[idx + 1]} &#8594;</button>`;
   }

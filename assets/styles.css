@@ -117,6 +117,47 @@ img {
   min-height: 100vh;
 }
 
+/* --- Sticky Demo CTA Bar --- */
+.demo-cta-bar {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  padding: var(--space-md) var(--space-lg);
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.demo-cta-bar:hover {
+  filter: brightness(0.95);
+}
+
+.demo-cta-bar--green {
+  background: #00FFA3;
+}
+
+.demo-cta-bar--blue {
+  background: #CBE0FF;
+}
+
+.demo-cta-bar--purple {
+  background: #8F4AFF;
+  color: #ffffff;
+}
+
+.demo-cta-bar__arrow {
+  margin-left: var(--space-xs);
+  font-weight: 700;
+}
+
 /* --- Top Header (tour pages — white bar with logo) --- */
 .app-header {
   background: #ffffff;
